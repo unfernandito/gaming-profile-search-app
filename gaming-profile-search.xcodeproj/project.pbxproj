@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C322A9FC287C5064002D9F3E /* gaming_profile_searchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322A9FB287C5064002D9F3E /* gaming_profile_searchApp.swift */; };
-		C322A9FE287C5064002D9F3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322A9FD287C5064002D9F3E /* ContentView.swift */; };
 		C322AA00287C506E002D9F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C322A9FF287C506E002D9F3E /* Assets.xcassets */; };
 		C322AA03287C506E002D9F3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C322AA02287C506E002D9F3E /* Preview Assets.xcassets */; };
 		C322AA0D287C5070002D9F3E /* gaming_profile_searchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA0C287C5070002D9F3E /* gaming_profile_searchTests.swift */; };
 		C322AA17287C5070002D9F3E /* gaming_profile_searchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA16287C5070002D9F3E /* gaming_profile_searchUITests.swift */; };
 		C322AA19287C5070002D9F3E /* gaming_profile_searchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA18287C5070002D9F3E /* gaming_profile_searchUITestsLaunchTests.swift */; };
+		C322AA29287C5133002D9F3E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA28287C5132002D9F3E /* HomeView.swift */; };
+		C322AA2B287C517C002D9F3E /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA2A287C517C002D9F3E /* ApiResponse.swift */; };
+		C322AA2D287C522B002D9F3E /* Profiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA2C287C522B002D9F3E /* Profiles.swift */; };
+		C322AA2F287C560F002D9F3E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA2E287C560F002D9F3E /* HomeViewModel.swift */; };
+		C322AA31287C56CB002D9F3E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA30287C56CB002D9F3E /* Search.swift */; };
+		C322AA33287CD9D5002D9F3E /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA32287CD9D5002D9F3E /* ConfigView.swift */; };
+		C322AA36287CDFDB002D9F3E /* CardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA35287CDFDA002D9F3E /* CardElement.swift */; };
+		C322AA38287CE106002D9F3E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA37287CE106002D9F3E /* ProfileView.swift */; };
+		C322AA3A287CE391002D9F3E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322AA39287CE391002D9F3E /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		C322A9F8287C5064002D9F3E /* gaming-profile-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gaming-profile-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C322A9FB287C5064002D9F3E /* gaming_profile_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaming_profile_searchApp.swift; sourceTree = "<group>"; };
-		C322A9FD287C5064002D9F3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C322A9FF287C506E002D9F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C322AA02287C506E002D9F3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C322AA08287C5070002D9F3E /* gaming-profile-searchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gaming-profile-searchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,15 @@
 		C322AA12287C5070002D9F3E /* gaming-profile-searchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gaming-profile-searchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C322AA16287C5070002D9F3E /* gaming_profile_searchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaming_profile_searchUITests.swift; sourceTree = "<group>"; };
 		C322AA18287C5070002D9F3E /* gaming_profile_searchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaming_profile_searchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C322AA28287C5132002D9F3E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C322AA2A287C517C002D9F3E /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C322AA2C287C522B002D9F3E /* Profiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profiles.swift; sourceTree = "<group>"; };
+		C322AA2E287C560F002D9F3E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C322AA30287C56CB002D9F3E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		C322AA32287CD9D5002D9F3E /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		C322AA35287CDFDA002D9F3E /* CardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElement.swift; sourceTree = "<group>"; };
+		C322AA37287CE106002D9F3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C322AA39287CE391002D9F3E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +110,14 @@
 		C322A9FA287C5064002D9F3E /* gaming-profile-search */ = {
 			isa = PBXGroup;
 			children = (
+				C322AA34287CDFCC002D9F3E /* Components */,
+				C322AA27287C511C002D9F3E /* ViewModel */,
+				C322AA26287C5116002D9F3E /* Model */,
+				C322AA25287C510F002D9F3E /* View */,
 				C322A9FB287C5064002D9F3E /* gaming_profile_searchApp.swift */,
-				C322A9FD287C5064002D9F3E /* ContentView.swift */,
 				C322A9FF287C506E002D9F3E /* Assets.xcassets */,
 				C322AA01287C506E002D9F3E /* Preview Content */,
+				C322AA32287CD9D5002D9F3E /* ConfigView.swift */,
 			);
 			path = "gaming-profile-search";
 			sourceTree = "<group>";
@@ -125,6 +145,42 @@
 				C322AA18287C5070002D9F3E /* gaming_profile_searchUITestsLaunchTests.swift */,
 			);
 			path = "gaming-profile-searchUITests";
+			sourceTree = "<group>";
+		};
+		C322AA25287C510F002D9F3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C322AA28287C5132002D9F3E /* HomeView.swift */,
+				C322AA37287CE106002D9F3E /* ProfileView.swift */,
+				C322AA39287CE391002D9F3E /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C322AA26287C5116002D9F3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C322AA2A287C517C002D9F3E /* ApiResponse.swift */,
+				C322AA2C287C522B002D9F3E /* Profiles.swift */,
+				C322AA30287C56CB002D9F3E /* Search.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C322AA27287C511C002D9F3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C322AA2E287C560F002D9F3E /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C322AA34287CDFCC002D9F3E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C322AA35287CDFDA002D9F3E /* CardElement.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +313,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C322A9FE287C5064002D9F3E /* ContentView.swift in Sources */,
+				C322AA3A287CE391002D9F3E /* SearchView.swift in Sources */,
+				C322AA36287CDFDB002D9F3E /* CardElement.swift in Sources */,
+				C322AA38287CE106002D9F3E /* ProfileView.swift in Sources */,
+				C322AA2B287C517C002D9F3E /* ApiResponse.swift in Sources */,
+				C322AA2D287C522B002D9F3E /* Profiles.swift in Sources */,
+				C322AA29287C5133002D9F3E /* HomeView.swift in Sources */,
+				C322AA33287CD9D5002D9F3E /* ConfigView.swift in Sources */,
+				C322AA31287C56CB002D9F3E /* Search.swift in Sources */,
+				C322AA2F287C560F002D9F3E /* HomeViewModel.swift in Sources */,
 				C322A9FC287C5064002D9F3E /* gaming_profile_searchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

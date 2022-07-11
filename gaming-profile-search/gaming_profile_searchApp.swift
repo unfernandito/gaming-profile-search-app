@@ -11,7 +11,7 @@ import SwiftUI
 struct gaming_profile_searchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
