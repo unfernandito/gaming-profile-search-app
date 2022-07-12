@@ -7,79 +7,44 @@
 
 import SwiftUI
 
-let elements = [
-    CardElement(
-        name: "Minecraft",
-        background: "MinecraftBackground",
-        textColor: Color("MinecraftTextColor"),
-        backgroundText: Color("MinecraftTextColor"),
-        backgroundColor: Color("MinecraftColor")
-    ),
-    CardElement(
-        name: "Steam",
-        background: "SteamBackground",
-        textColor: Color.white,
-        backgroundText: Color.black,
-        backgroundColor: Color.white
-    ),
-    CardElement(
-        name: "Xbox",
-        background: "XboxBackground",
-        textColor: Color.white,
-        backgroundText: Color.white,
-        backgroundColor: Color("XboxColor")
-    ),
-]
-
 struct HomeView: View {
     @StateObject private var homeViewModel = HomeViewModel()
-    @State var searchValue : String = ""
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     if homeViewModel.lastSearch?.value != nil {
-                        ZStack(alignment: .topLeading){
-                            Rectangle()
-                                .fill( LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom))
-                                .cornerRadius(10)
-                            
-                            HStack(alignment: .center){
-                                Circle()
-                                    .foregroundColor(.red)
-                                    .frame(width: 72, height: 72)
-                                
-                                VStack(alignment: .leading){
-                                    Text("Last Search")
-                                        .font(.title)
-                                        .fontWeight(.semibold)
-                                        .foregroundColor(Color.white)
-                                    
-                                    Text("Profile name")
-                                        .font(.subheadline)
-                                        .fontWeight(.light)
-                                        .foregroundColor(Color.white)
-                                    
-                                    Spacer()
-                                }
-                                Spacer()
-                            }
-                            .padding()
-                        }
-                        .padding()
-                            
+                        LastSearchComponent(lastSearch: homeViewModel.lastSearch)
                         Divider()
                     }
-                   
+
                     VStack(alignment: .leading, spacing: 30) {
-                        ForEach(elements, id: \.self.name) { element in
-                            CardElementComponent(element: element)
+                        ForEach(homeViewModel.listCardElements(), id: \.self.id) { element in
+                            CardElementComponent(
+                                element: element,
+                                onTapHandler: { storeID in
+                                    homeViewModel.setStoreID(storeID)
+                                    homeViewModel.showViewInput.toggle()
+                                })
                         }
                         Spacer()
                     }
                     .padding()
                 }
+            }
+            .sheet(isPresented: $homeViewModel.showViewInput) {
+                SearchComponent(
+                    valueSearch: $homeViewModel.valueSearch,
+                    cleanup: {
+                        homeViewModel.clearSearchValue()
+                        homeViewModel.profileActive.toggle()
+                    },
+                    submit: {
+                        homeViewModel.makeSearch()
+                        homeViewModel.profileActive.toggle()
+                    }
+                )
             }
             .navigationTitle("Gaming Profiles")
             .navigationBarTitleDisplayMode(.inline)
@@ -93,5 +58,3 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-
-

@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+    public var profile: ApiResponse?
+
     var body: some View {
-        VStack{
-            Text("Profile View")
+        if profile != nil {
+            VStack {
+                Text("Profile View")
+            }
+            .navigationTitle("Your profile")
+        } else {
+            ProgressView()
         }
-        .navigationTitle("Your profile")
     }
 }
 

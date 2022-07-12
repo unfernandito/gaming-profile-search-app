@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct PlayerResponse<T : Codable> : Identifiable, Codable {
-    var id : String
-    var username : String
-    var avatar : String
-    var raw_id : Optional<String>
-    var meta : Optional<T>
+struct PlayerResponse: Codable, Identifiable {
+    var id: String
+    var username: String
+    var avatar: String
+    var raw_id: String?
+    // var meta: ProfileType
 }
 
-struct DataPlayer<T : Codable> : Codable {
-    let player : PlayerResponse<T>
+struct DataPlayer: Codable {
+    let player: PlayerResponse?
 }
 
-struct ApiResponse<T : Codable> : Codable {
-    let code : String
-    let message : String
-    var data: DataPlayer<T>
-    let success : Bool
-    let error : Optional<Bool>
+struct ApiResponse: Codable {
+    let code: String
+    let message: String
+    var data: DataPlayer?
+    let success: Bool
+    let error: Bool?
 }

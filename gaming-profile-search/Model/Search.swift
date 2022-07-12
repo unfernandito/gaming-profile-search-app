@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Search : Codable {
-    var value : Optional<String> = nil
-    var searchedAt : Optional<Int> = nil
+struct Search: Codable {
+    var value: String
+    var typeSearch: String
+    var searchedAt: String
 }
