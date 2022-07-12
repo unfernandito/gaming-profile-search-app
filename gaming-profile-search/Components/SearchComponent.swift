@@ -38,5 +38,7 @@ struct SearchComponent_Previews: PreviewProvider {
         SearchComponent(valueSearch: $valueSearch, cleanup: {
             valueSearch = ""
         })
+        .previewDevice("iPhone 13")
+        .previewLayout(.sizeThatFits)
     }
 }

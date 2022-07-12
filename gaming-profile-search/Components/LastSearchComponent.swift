@@ -61,5 +61,7 @@ struct LastSearchComponent: View {
 struct LastSearchComponent_Previews: PreviewProvider {
     static var previews: some View {
         LastSearchComponent()
+            .previewDevice("iPhone 13")
+            .previewLayout(.sizeThatFits)
     }
 }

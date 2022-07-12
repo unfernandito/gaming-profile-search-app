@@ -83,5 +83,7 @@ struct CardElementComponent_Previews: PreviewProvider {
         ), onTapHandler: {storeID in 
             
         })
+        .previewDevice("iPhone 13")
+        .previewLayout(.sizeThatFits)
     }
 }
