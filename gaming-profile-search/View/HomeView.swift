@@ -15,7 +15,13 @@ struct HomeView: View {
             ScrollView {
                 VStack {
                     if homeViewModel.lastSearch?.value != nil {
-                        LastSearchComponent(lastSearch: homeViewModel.lastSearch)
+                        NavigationLink(
+                            destination: ProfileView(profile: homeViewModel.profileData),
+                            label: {
+                                LastSearchComponent(lastSearch: homeViewModel.lastSearch)
+                            }
+                        )
+                        
                         Divider()
                     }
 
@@ -31,6 +37,12 @@ struct HomeView: View {
                         Spacer()
                     }
                     .padding()
+                    
+                    NavigationLink(destination: ProfileView(profile: homeViewModel.profileData),
+                                   isActive: $homeViewModel.profileActive,
+                    label: {
+                        EmptyView()
+                    })
                 }
             }
             .sheet(isPresented: $homeViewModel.showViewInput) {
@@ -38,11 +50,12 @@ struct HomeView: View {
                     valueSearch: $homeViewModel.valueSearch,
                     cleanup: {
                         homeViewModel.clearSearchValue()
-                        homeViewModel.profileActive.toggle()
                     },
                     submit: {
                         homeViewModel.makeSearch()
+                        homeViewModel.showViewInput.toggle()
                         homeViewModel.profileActive.toggle()
+                        homeViewModel.clearSearchValue()
                     }
                 )
             }
