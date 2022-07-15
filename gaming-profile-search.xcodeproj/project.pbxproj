@@ -201,8 +201,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				C34D0EAF28805385003C74E9 /* PBXTargetDependency */,
 			);
 			name = "gaming-profile-search";
+			packageProductDependencies = (
+			);
 			productName = "gaming-profile-search";
 			productReference = C322A9F8287C5064002D9F3E /* gaming-profile-search.app */;
 			productType = "com.apple.product-type.application";
@@ -275,6 +278,8 @@
 				Base,
 			);
 			mainGroup = C322A9EF287C5064002D9F3E;
+			packageReferences = (
+			);
 			productRefGroup = C322A9F9287C5064002D9F3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +386,10 @@
 			isa = PBXTargetDependency;
 			target = C322A9F7287C5064002D9F3E /* gaming-profile-search */;
 			targetProxy = C322AA13287C5070002D9F3E /* PBXContainerItemProxy */;
+		};
+		C34D0EAF28805385003C74E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C34D0EAE28805385003C74E9 /* HotReloading */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C34D0EAB2880534C003C74E9 /* XCRemoteSwiftPackageReference "HotReloading" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnno1962/HotReloading.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C34D0EAE28805385003C74E9 /* HotReloading */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C34D0EAB2880534C003C74E9 /* XCRemoteSwiftPackageReference "HotReloading" */;
+			productName = HotReloading;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C322A9F0287C5064002D9F3E /* Project object */;
 }
